@@ -7,6 +7,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import './index.css';
 import "./styles/main.bundle.css";
 
+
+
 import Landing from "views/Landing.js";
 import AppLayout from "Layout/AppLayout";
 import StudentDashboard from "components/students/StudentDashboard";
@@ -18,6 +20,7 @@ import LoginPage from "components/students/Sections/Auth/Login/LoginPage";
 import ForgetPasswordPage from "components/students/Sections/Auth/ForgetPassword/ForgetPasswordPage";
 import AuthScreens from "components/students/Sections/Auth/AuthScreens";
 import ChangePasswordPage from "components/students/Sections/Auth/ChangePassword/ChangePasswordPage";
+import SuperAdminDashboard from "components/superAdmin/sections/SuperAdminDashboard";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -32,6 +35,10 @@ ReactDOM.render(
       <Route exact path="/changePassword" component={ChangePasswordPage} />
       <Route exact path="/forgetPassword" component={ForgetPasswordPage} />
       <Route exact path="/auth" component={AuthScreens} />
+
+       {/* //superAdminRoutes */}
+       <Route exact path="/superAdminDashboard" component={SuperAdminDashboard} />
+
 
       <Redirect from='/' to='/dashboard' />
     </Switch>
