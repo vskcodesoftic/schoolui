@@ -15,6 +15,9 @@ import StudentMainDashboard from "components/students/Sections/studentProfile/St
 import DashboardLayout from "Layout/AdminLayout";
 import FeeAnnoucementsPage from "components/students/Sections/FeeAnnouncementsPage";
 import LoginPage from "components/students/Sections/Auth/Login/LoginPage";
+import ForgetPasswordPage from "components/students/Sections/Auth/ForgetPassword/ForgetPasswordPage";
+import AuthScreens from "components/students/Sections/Auth/AuthScreens";
+import ChangePasswordPage from "components/students/Sections/Auth/ChangePassword/ChangePasswordPage";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -26,6 +29,9 @@ ReactDOM.render(
       <Route exact path="/feeAnnouncements" component={FeeAnnoucementsPage} />
 
       <Route exact path="/login" component={LoginPage} />
+      <Route exact path="/changePassword" component={ChangePasswordPage} />
+      <Route exact path="/forgetPassword" component={ForgetPasswordPage} />
+      <Route exact path="/auth" component={AuthScreens} />
 
       <Redirect from='/' to='/dashboard' />
     </Switch>

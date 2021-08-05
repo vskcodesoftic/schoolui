@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 
 import bgImage from '../../../../../assets/img/working.png'
 import rectangleShape from '../../../../../assets/img/working.png'
-import './LoginPage.css'
-const LoginPage = () => {
+import './ForgetPassword.css'
+const ForgetPassword = () => {
     return (
         <div>
             <Navbar />
             <div className="p-5 my-5" ><div className="text-5xl font-extrabold ...">
   <span class="flex bg-clip-text text-transparent p-5 justify-center bg-gradient-to-r from-green-400 to-blue-500">
-    Login 
+    Forget Password
   </span>
 </div></div>
 
@@ -31,29 +31,20 @@ const LoginPage = () => {
                           </div>
                         </div>
               
-                        <div className="md:flex md:items-center mb-6">
-                          <div className="md:w-1/3">
-                            <label className="block text-gray-500 sm:text-center font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                             Password
-                            </label>
-                          </div>
-                          <div className="md:w-2/3 border-b border-teal-500">
-                            <input className="appearance-none rounded-lg bg-transparent border-none w-full text-gray-700 focus:ring-2 focus:ring-green-600  mr-3 py-1 px-2 leading-tight focus:outline-green-400" id="inline-full-name" type="password" value="JaneDoe@gmail.com" />
-                          </div>
-                        </div>
+                       
 
                       <div className="flex m-5">
                        
                           <div className="w-full flex justify-center">
                             <button className="shadow bg-green-500 mx-5  hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-5 rounded-3xl" type="button">
-                              login
+                              send verfication
                             </button>
                           </div>
                         
                         </div>
                         <div className="flex m-5 w-full justify-end">
-                            <a href="/forgetPassword" className="text-black font-semi-bold py-1 px-5 rounded-3xl">
-                              forget password ?
+                            <a href="/login" className="text-black font-semi-bold py-1 px-5 rounded-3xl">
+                              login ?
                             </a>
                           </div>
                 
@@ -75,4 +66,4 @@ const LoginPage = () => {
     )
 }
 
-export default LoginPage
+export default ForgetPassword
