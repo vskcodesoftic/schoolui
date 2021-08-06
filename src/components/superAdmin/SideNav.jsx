@@ -4,7 +4,7 @@ const SideNav = () => {
     return (
         <div className="bg-green-400">
         <div class="min-h-screen flex bg-gray-100 ">
-   <div class="flex w-full max-w-xs p-4 bg-white">
+   <div class="flex w-full max-w-xs p-4 bg-white border-r-2 border-green-100">
        <ul class="flex flex-col w-full">
            <li class="my-px">
                <a href="#"
