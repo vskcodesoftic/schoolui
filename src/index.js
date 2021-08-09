@@ -23,6 +23,7 @@ import ChangePasswordPage from "components/students/Sections/Auth/ChangePassword
 import SuperAdminDashboard from "components/superAdmin/sections/SuperAdminDashboard";
 import AdminDashboard from "components/Admin/sections/AdminDashboard";
 import StudentAttendence from "components/Admin/pages/Attendence/StudentAttendence";
+import FacultyAttendence from "components/Admin/pages/Attendence/FacultyAttendence";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -44,6 +45,7 @@ ReactDOM.render(
         {/* //AdminRoutes */}
         <Route exact path="/adminDashboard" component={AdminDashboard} />
         <Route exact path="/admin/getStudentAttendence" component={StudentAttendence} />
+        <Route exact path="/admin/getFacultyAttendence" component={FacultyAttendence} />
 
 
       <Redirect from='/' to='/dashboard' />

@@ -49,7 +49,7 @@ const columns = [
 
 ];
 
-const StudentAttendenceDataTable =() => {
+const FacultyAttendenceDataTable =() => {
     return (
       <>
       <DropListBox />
@@ -62,4 +62,4 @@ const StudentAttendenceDataTable =() => {
   
 };
 
-export default StudentAttendenceDataTable;
+export default FacultyAttendenceDataTable;

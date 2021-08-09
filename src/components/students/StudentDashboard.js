@@ -10,7 +10,8 @@ import SchoolFee from './Sections/SchoolFee'
 const StudentDashboard = () => {
     return (
         <div>
-            <AppLayout>            <div className="p-5 mt-2">
+            <AppLayout>  
+                          <div className="p-5 mt-2">
                  <h1 className="text-center text-3xl capitalize">Welcome Jordan</h1>
 
                  <div className="flex gap-4 gap-x-4 gap-y-4 xl:grid-cols-2 grid-col-1 mt-5">

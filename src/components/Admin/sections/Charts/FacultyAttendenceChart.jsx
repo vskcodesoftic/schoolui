@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Chart from 'react-apexcharts'
 
-class StudentAttendenceChart extends Component {
+class FacultyAttendenceChart extends Component {
 
   constructor(props) {
     super(props);
@@ -16,15 +16,16 @@ class StudentAttendenceChart extends Component {
     }
   }
 
+
   render() {
 
     return (
       <div className=" justify-center items-center">
-        <p>Student Attendence</p>
+        <p>Faculty Attendence Chart</p>
         <Chart options={this.state.options} series={this.state.series} type="donut"   width="380" />
       </div>
     );
   }
 }
 
-export default StudentAttendenceChart;
+export default FacultyAttendenceChart;

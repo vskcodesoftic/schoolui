@@ -27,13 +27,14 @@ export default function DropListBox() {
 
   return (
     <div className="">
-        <div className="flex p-5 m-1 shadow-2lg justify-center">
+        <div className="flex p-5 shadow-2lg justify-center ">
             <h1 className="text-center text-green-400 font-bold text-2xl underline">Reports</h1>
         </div>
-        <div className="grid grid-flow-col grid-rows-3 md:grid-rows-1  gap-x-1 pb-4 mb-3">
-      <Listbox value={selectedClass} onChange={setselectedClass}>
+        <div className ="flex justify-center">
+        <div className="pb-4 mb-3  inline-flex ">
+      <Listbox value={selectedClass} onChange={setselectedClass} className="flex ">
         <div className="relative mt-1">
-          <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+          <Listbox.Button className="relative  py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
             <span className="block truncate">{selectedClass.name}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <SelectorIcon
@@ -48,7 +49,7 @@ export default function DropListBox() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute  py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {classes.map((userclass, userclassIdx) => (
                 <Listbox.Option
                   key={userclassIdx}
@@ -85,9 +86,9 @@ export default function DropListBox() {
           </Transition>
         </div>
       </Listbox>
-      <Listbox value={selectedSection} onChange={setselectedSection}>
+      <Listbox value={selectedSection} onChange={setselectedSection} className="flex  m-2">
         <div className="relative mt-1">
-          <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+          <Listbox.Button className="relative  py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
             <span className="block truncate">{selectedSection.name}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <SelectorIcon
@@ -102,7 +103,7 @@ export default function DropListBox() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute  py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {sections.map((section, sectionIdx) => (
                 <Listbox.Option
                   key={sectionIdx}
@@ -139,11 +140,14 @@ export default function DropListBox() {
           </Transition>
         </div>
       </Listbox>
-      <button className="bg-green-500 hover:bg-green-400 rounded-lg text-white px-4 py-2 my-2">
+      <div className="flex ">
+      <button className="bg-green-500  hover:bg-green-400 rounded-lg text-white px-4 py-2 my-2">
        Search
       </button>
       </div>
-     
+      </div>
+      </div>
+
     </div>
   )
 }
