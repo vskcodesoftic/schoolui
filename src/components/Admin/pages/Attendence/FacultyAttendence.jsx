@@ -12,7 +12,7 @@ import DropListBox from '../../sections/DropDown/ClassSectionDropDown'
 import StudentAttendenceDataTable from 'components/Admin/DataTables/StudentAttendenceDataTable'
 import FeeAnnoucementsDataTable from 'components/students/Sections/DataTables/FeeAnnoucementsDataTable'
 import AllAnnouncementsDataTable from 'components/students/Sections/DataTables/AllAnnouncementsDataTable'
-import FacultyAttendenceChart from 'components/Admin/sections/Charts/IncomeChart'
+import FacultyAttendenceChart from 'components/Admin/sections/Charts/FacultyAttendenceChart'
 import FacultyAttendenceDataTable from 'components/Admin/DataTables/FeeAnnoucementsDataTable'
 
 const FacultyAttendence = (props) => {
