@@ -24,6 +24,9 @@ import SuperAdminDashboard from "components/superAdmin/sections/SuperAdminDashbo
 import AdminDashboard from "components/Admin/sections/AdminDashboard";
 import StudentAttendence from "components/Admin/pages/Attendence/StudentAttendence";
 import FacultyAttendence from "components/Admin/pages/Attendence/FacultyAttendence";
+import AddUserRole from "components/Admin/pages/AddUser/AddUser";
+import TeacherDashboard from "components/Teacher/sections/TeacherDashboard";
+import { AttendencePage } from "components/Teacher/pages/Attendence/AttendencePage";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -46,7 +49,13 @@ ReactDOM.render(
         <Route exact path="/adminDashboard" component={AdminDashboard} />
         <Route exact path="/admin/getStudentAttendence" component={StudentAttendence} />
         <Route exact path="/admin/getFacultyAttendence" component={FacultyAttendence} />
+        <Route exact path="/admin/addUserRole" component={AddUserRole} />
 
+   {/* //TeacherRoutes */}
+   <Route exact path="/TeacherDashboard" component={TeacherDashboard} />
+        <Route exact path="/teacher/Attendence" component={AttendencePage} />
+        <Route exact path="/admin/getFacultyAttendence" component={FacultyAttendence} />
+        <Route exact path="/admin/addUserRole" component={AddUserRole} />
 
       <Redirect from='/' to='/dashboard' />
     </Switch>
