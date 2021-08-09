@@ -5,6 +5,8 @@
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@fortawesome/fontawesome-free": "5.15.3",
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.3",
     "apexcharts": "^3.27.3",
     "awesome-react-icons": "^1.4.8",
     "react": "^17.0.2",

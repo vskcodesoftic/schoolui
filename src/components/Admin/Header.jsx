@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
         <div className="bg-white p-5 m-2">
-                 <h1 className="bold-text text-2xl	 text-green-500 broder border-b b-2  border-green-500 captalize text-center">Welcome Super Admin </h1> 
+                 <h1 className="bold-text text-2xl	 text-green-500 broder border-b b-2  border-green-500 captalize text-center">Welcome Admin </h1> 
         </div>
         <div className="">
         <div className="grid grid-flow-col  grid-rows-2 md:grid-rows-1 gap-2 py-2 px-2 ">

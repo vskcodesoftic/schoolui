@@ -2,13 +2,13 @@ import React from 'react'
 import Navbar from '../../Navbar'
 import SideNav from '../SideNav'
 import AttendenceCard from './Cards/AttendenceCard'
-import ExpensesChart from './Charts/ExpensesChart'
+import StudentAttendenceChart from './Charts/StudentAttendenceChart'
 import IncomeChart from './Charts/IncomeChart'
 import FeesOverview from './FeesOverview'
 import Header from '../Header'
 import LibarayOverview from './LibarayOverview'
 import { NavSidebar } from 'Layout/NavSidebar'
-const SuperAdminDashboard = (props) => {
+const AdminDashboard = (props) => {
     return (
         <>
         <div class="grid grid-flow-col grid-col-4 ">
@@ -21,7 +21,7 @@ const SuperAdminDashboard = (props) => {
                                                 <IncomeChart />
                                             </div>
                                             <div className="flex  p-2 my-2  flex justify-center shadow-lg">
-                                                <ExpensesChart />
+                                                <StudentAttendenceChart />
                                             </div>
                             
                             </div>
@@ -51,4 +51,4 @@ const SuperAdminDashboard = (props) => {
     )
 }
 
-export default SuperAdminDashboard
+export default AdminDashboard
