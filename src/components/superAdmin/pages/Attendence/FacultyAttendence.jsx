@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Header'
-import FacultyAttendenceChart from 'components/Admin/sections/Charts/FacultyAttendenceChart'
-import FacultyAttendenceDataTable from 'components/Admin/DataTables/FeeAnnoucementsDataTable'
+import FacultyAttendenceChart from '../../sections/Charts/FacultyAttendenceChart'
+import FacultyAttendenceDataTable from '../../DataTables/FacultytAttendenceDataTable'
 
 const FacultyAttendence = (props) => {
     return (

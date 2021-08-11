@@ -8,6 +8,13 @@ import { Route } from 'react-router';
 import AdminDashboard from './components/Admin/sections/AdminDashboard'
 
 import SuperAdminDashboard from './components/superAdmin/sections/SuperAdminDashboard'
+import FacultyAttendence from './components/superAdmin/pages/Attendence/FacultyAttendence';
+import StudentAttendence from './components/superAdmin/pages/Attendence/StudentAttendence';
+import NonPermanentAttendence from './components/superAdmin/pages/Attendence/NonPermanentAttendence';
+import AdminsAttendence from './components/superAdmin/pages/Attendence/AdminsAttendence';
+import LibrainAttendencePage from './components/superAdmin/pages/Attendence/LibrainAttendencePage';
+import AccountantAttendencePage from './components/superAdmin/pages/Attendence/AccountantAttendencePage';
+import ClerkAttendencePage from './components/superAdmin/pages/Attendence/ClerkAttendencePage';
 
 const Main = ({
   collapsed,
@@ -35,6 +42,33 @@ const Main = ({
      <Route exact path="/superadmin/dashboard" >
        <SuperAdminDashboard />
      </Route>
+
+     <Route exact path="/superadmin/attendence/teacher" >
+       <FacultyAttendence />
+     </Route>
+     <Route exact path="/superadmin/attendence/admin" >
+       <AdminsAttendence />
+     </Route>
+
+     <Route exact path="/superadmin/attendence/temporary-teacher" >
+       <NonPermanentAttendence />
+     </Route>
+
+     <Route exact path="/superadmin/attendence/student" >
+       <StudentAttendence />
+     </Route>
+
+     <Route exact path="/superadmin/attendence/librarian" >
+       <LibrainAttendencePage />
+     </Route>
+     <Route exact path="/superadmin/attendence/accountant" >
+       <AccountantAttendencePage />
+     </Route>
+     <Route exact path="/superadmin/attendence/clerk" >
+       <ClerkAttendencePage />
+     </Route>
+
+
 
   </main>
   );

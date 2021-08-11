@@ -60,32 +60,38 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
          
           <SubMenu title={`${intl.formatMessage({ id: 'Admin' })} `}>
               <MenuItem>{intl.formatMessage({ id: 'View Data' })}  </MenuItem>
-              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  </MenuItem>
+              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })} <Link to="/superadmin/attendence/admin" />  </MenuItem>
           </SubMenu>
 
           <SubMenu title={`${intl.formatMessage({ id: 'Accountant' })} `}>
               <MenuItem>{intl.formatMessage({ id: 'View Data' })}  </MenuItem>
-              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  </MenuItem>
+              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  <Link to="/superadmin/attendence/accountant" />   </MenuItem>
           </SubMenu>
 
           <SubMenu title={`${intl.formatMessage({ id: 'Clerk' })} `}>
               <MenuItem>{intl.formatMessage({ id: 'View Data' })}  </MenuItem>
-              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  </MenuItem>
+              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  <Link to="/superadmin/attendence/clerk" />  </MenuItem>
+          </SubMenu>
+
+          <SubMenu title={`${intl.formatMessage({ id: 'librarian' })} `}>
+              <MenuItem>{intl.formatMessage({ id: 'View Data' })}  </MenuItem>
+              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  <Link to="/superadmin/attendence/librarian" />  </MenuItem>
           </SubMenu>
 
             <SubMenu title={`${intl.formatMessage({ id: 'Students' })} `}>
               <MenuItem>{intl.formatMessage({ id: 'View Data' })}   </MenuItem>
-              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}   </MenuItem>
+              <MenuItem>{intl.formatMessage({ id: 'View Attendence' })}  <Link to="/superadmin/attendence/student" /> </MenuItem>
             </SubMenu>
 
                 
-          <SubMenu title={intl.formatMessage({ id: 'teacher' })} icon={<FaList />}>
+          <SubMenu title={intl.formatMessage({ id: 'Teachers' })} icon={<FaList />}>
 
-<SubMenu title={`${intl.formatMessage({ id: 'Permanent' })}  `}>
-    <MenuItem>{intl.formatMessage({ id: 'View Data' })} </MenuItem>
+    <SubMenu title={`${intl.formatMessage({ id: 'Permanent' })}  `}>
+    <MenuItem>{intl.formatMessage({ id: 'View Attendence' })} <Link to="/superadmin/attendence/teacher" /> </MenuItem>
+
 </SubMenu>
 <SubMenu title={`${intl.formatMessage({ id: 'Tempaory' })}  `}>
-<MenuItem>{intl.formatMessage({ id: 'View Data' })} </MenuItem>
+<MenuItem>{intl.formatMessage({ id: 'View Attendence' })} <Link to="/superadmin/attendence/temporary-teacher" /> </MenuItem>
 
   </SubMenu>
 </SubMenu>
