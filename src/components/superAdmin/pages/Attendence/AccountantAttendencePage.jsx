@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Header'
 import AccountantAttendenceChart from '../../sections/Charts/AccountanAttendenceChart'
-import AccountantAttendenceDataTable from '../../DataTables/AccountantattendenceDataTable'
+import AccountantAttendenceDataTable from '../../DataTables/Attendence/AccountantattendenceDataTable'
 
 const AccountantAttendencePage = (props) => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Header'
 import LibrainAttendencePageChart from '../../sections/Charts/LibrainAttendenceChart'
-import LibrainAttendencePageDataTable from '../../DataTables/LibrainAttendenceDataTable'
+import LibrainAttendencePageDataTable from '../../DataTables/Attendence/LibrainAttendenceDataTable'
 
 const LibrainAttendencePage = (props) => {
     return (

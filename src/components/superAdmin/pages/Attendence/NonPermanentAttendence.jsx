@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Header'
 import NonPermanentAttendenceChart from '../../sections/Charts/NonPemanentStaffAttendenceChart'
-import NonPermanentAttendenceDataTable from '../../DataTables/NonPermanentStaff'
+import NonPermanentAttendenceDataTable from '../../DataTables/Attendence/NonPermanentStaff'
 
 const NonPermanentAttendence = (props) => {
     return (

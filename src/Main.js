@@ -15,6 +15,7 @@ import AdminsAttendence from './components/superAdmin/pages/Attendence/AdminsAtt
 import LibrainAttendencePage from './components/superAdmin/pages/Attendence/LibrainAttendencePage';
 import AccountantAttendencePage from './components/superAdmin/pages/Attendence/AccountantAttendencePage';
 import ClerkAttendencePage from './components/superAdmin/pages/Attendence/ClerkAttendencePage';
+import AdminViewDataPage from './components/superAdmin/pages/ViewData/AdminViewDataPage';
 
 const Main = ({
   collapsed,
@@ -68,6 +69,9 @@ const Main = ({
        <ClerkAttendencePage />
      </Route>
 
+    <Route exact path="/superadmin/data/admin/view">
+      <AdminViewDataPage />
+    </Route>
 
 
   </main>

@@ -1,5 +1,5 @@
 import DataTable from 'react-data-table-component';
-import DropListBox from '../sections/DropDown/ClassSectionDropDown';
+import DropListBox from '../../sections/DropDown/ClassSectionDropDown';
 
 const data = [
     { id: 1, date :'23/04/1998' , AddmissionNo: '11800336', FacultyName :'Jhon Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view' },

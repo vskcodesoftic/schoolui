@@ -4,7 +4,7 @@ import StudentAttendenceChart from '../../sections/Charts/StudentAttendenceChart
 
 import Header from '../../Header'
 
-import StudentAttendenceDataTable from '../../DataTables/StudentAttendenceDataTable'
+import StudentAttendenceDataTable from '../../DataTables/Attendence/StudentAttendenceDataTable'
 
 const StudentAttendence = (props) => {
     return (

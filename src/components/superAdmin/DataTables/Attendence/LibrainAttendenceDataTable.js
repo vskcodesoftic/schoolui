@@ -1,11 +1,11 @@
 import DataTable from 'react-data-table-component';
-import DropListBox from '../sections/DropDown/ClassSectionDropDown';
+import DropListBox from '../../sections/DropDown/ClassSectionDropDown';
 
 const data = [
-    { id: 1, date :'23/04/1998' , EmpId: '11800336', ClerkName :'Jhon Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view' },
-    { id: 2, date :'23/04/1998' , EmpId: '11800337' , ClerkName :'Sona Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view'  },
-    { id: 3, date :'23/04/1998' , EmpId: '11800338' , ClerkName :'Himawari Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view'  },
-    { id: 4, date :'23/04/1998' , EmpId: '11800339' , ClerkName :'Shiv' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view'  } 
+    { id: 1, date :'23/04/1998' , EmpId: '11800336', LibrainName :'Jhon Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view' },
+    { id: 2, date :'23/04/1998' , EmpId: '11800337' , LibrainName :'Sona Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view'  },
+    { id: 3, date :'23/04/1998' , EmpId: '11800338' , LibrainName :'Himawari Marcus' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view'  },
+    { id: 4, date :'23/04/1998' , EmpId: '11800339' , LibrainName :'Shiv' , FatherName :'incedious' , Gender : 'Male', Contact:'769669xxxx' , Action :'view'  } 
 ]
 const columns = [
     {
@@ -19,8 +19,8 @@ const columns = [
     sortable: true,
   },
   {
-    name: 'ClerkName',
-    selector: 'ClerkName',
+    name: 'LibrainName',
+    selector: 'LibrainName',
     sortable: true,
   },
   {
@@ -49,7 +49,7 @@ const columns = [
 
 ];
 
-const ClerkAttendenceDataTable =() => {
+const LibrainAttendenceDataTable =() => {
     return (
       <>
       <DropListBox />
@@ -62,4 +62,4 @@ const ClerkAttendenceDataTable =() => {
   
 };
 
-export default ClerkAttendenceDataTable;
+export default LibrainAttendenceDataTable;

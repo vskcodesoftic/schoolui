@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Header'
 import AdminsAttendenceChart from '../../sections/Charts/AdminsAttendenceChart'
-import AdminsAttendenceDataTable from '../../DataTables/AdminAttendenceDataTable'
+import AdminsAttendenceDataTable from '../../DataTables/Attendence/AdminAttendenceDataTable'
 
 const AdminsAttendence = (props) => {
     return (

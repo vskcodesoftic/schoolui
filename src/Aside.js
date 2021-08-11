@@ -59,7 +59,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
           <SubMenu title={intl.formatMessage({ id: 'Roles' })} icon={<FaList />}>
          
           <SubMenu title={`${intl.formatMessage({ id: 'Admin' })} `}>
-              <MenuItem>{intl.formatMessage({ id: 'View Data' })}  </MenuItem>
+              <MenuItem>{intl.formatMessage({ id: 'View Data' })}  <Link to="/superadmin/data/admin/view" /> </MenuItem>
               <MenuItem>{intl.formatMessage({ id: 'View Attendence' })} <Link to="/superadmin/attendence/admin" />  </MenuItem>
           </SubMenu>
 
