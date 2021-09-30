@@ -1,0 +1,138 @@
+import { useForm } from "react-hook-form";
+
+import { Button, Divider, Input ,FormControl , InputAdornment, InputLabel ,FormHelperText} from '@material-ui/core'
+import React ,{ useState, useEffect } from 'react'
+import Select from 'react-select'
+import axios from 'axios';
+
+
+const classes = [
+    { value: 'Class-5', label: 'Class-5' },
+    { value: 'Class-6', label: 'Class-6' },
+    { value: 'Class-7', label: 'Class-7' },
+    
+  ]
+
+
+const students = [
+    { value: 'ArjunReddy', label: 'ArjunReddy' },
+    { value: 'Mahveer', label: 'Mahveer' },
+    { value: 'Sakshi', label: 'Sakshi' }
+  ]
+
+  const sections = [
+    { value: 'sectionD1043', label: 'sectionD1043' },
+    { value: 'sectionD1042', label: 'sectionD1042' },
+    { value: 'sectiond1405', label: 'sectiond1405' }
+  ]
+
+ const MessageToGuardian = () => {
+    const [users, setUsers] = useState()
+    const [userId, setUserId] = useState()
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = data => console.log(data);
+
+   
+    // useEffect(()=>{
+    // //     const getUsers = async () => {
+    // //       const {data} = await axios.get('https://jsonplaceholder.typicode.com/users')
+    // //       setUsers(data)
+    // //     }
+    // //     getUsers()
+    // //   },[])
+
+    // // const options = users && users.map(user =>{
+    // //   return {label: user.name, value: user.id}
+    // // })
+
+
+ const options = [
+    { value: 'Admin', label: 'Admin' },
+    { value: 'Accountant', label: 'Accountant' },
+    { value: 'Clerk', label: 'Clerk' },
+    { value: 'Librairian', label: 'Librairian' },
+    { value: 'Student', label: 'Student' },
+    { value: 'Teacher', label: 'Teacher' },
+
+
+
+  ]
+
+  options.map(role => {
+      return {label : role.label , value : role.value }
+  })
+
+    return (
+        <div>
+          <div className="flex justify-center">
+            <button className=" text-center bg-green-400 hover:bg-green-500 shadow-lg hover:shadow-2xl text-white m-2  py-2 px-4 rounded-full">
+                 Message to Guardian
+            </button>
+            </div>
+            <div className="p-5 m-5">
+       
+              {/* {users && (
+                <Select 
+                placeholder='Select user...'
+                isSearchable
+                value={options.label}
+                options={options}
+                onChange={(option) => setUserId(option.value) }
+                />
+                )} */}
+
+
+        
+               <div className="bg-white  shadow-2xl p-5 ">
+               <form onSubmit={handleSubmit(onSubmit)} className="gap-y-2">
+                {/* register your input into the hook by invoking the "register" function */}
+                <div className="md:flex md:items-center mb-6 justify-center">
+                        
+                        <div className="md:w-1/3  border-b m-2">
+                                       <p>Select Class : </p>
+                                        <Select options={classes} className="w-full"/>
+                        </div>
+
+                        <div className="md:w-1/3 border-b m-2 ">
+                        <p>Select Section : </p>
+
+                         <Select options={sections} className="w-full"/>
+                    </div>
+
+                    <div className="md:w-1/3 border-b m-2 ">
+                    <p>Select Student : </p>
+
+                         <Select options={students} className="w-full"/>
+                    </div>
+
+                </div>
+
+                                        
+                <div className="md:flex md:items-center mb-6 justify-center">
+                        
+                          <div className="md:w-1/3 border border-green-500">
+
+                            <textarea rows="5" className="appearance-none rounded-lg bg-transparent border-none w-full text-gray-700 focus:ring-2 focus:ring-green-600  mr-3 py-1 px-2 leading-tight focus:outline-green-400" id="inline-full-name" placeholder="message" {...register("name")} />
+                          </div>   
+                 </div>
+
+               
+              
+            
+           
+                {/* errors will return when field validation fails  */}
+                {errors.exampleRequired && <span>This field is required</span>}
+                 <div className="flex justify-center">
+                 <button type="submit" className="bg-green-500 hover:bg-green-400 text-white shadow-lg hover:shadow-2xl px-5 py-1 rounded-2xl ">
+                   Submit
+                 </button>
+                 </div>
+               </form> 
+                  </div>
+           </div>
+       </div>
+    )
+}
+
+export default MessageToGuardian;
