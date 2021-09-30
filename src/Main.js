@@ -44,8 +44,8 @@ const Main = ({
   return (
     <main>
       <div className="bg-green-500 p-5"></div>
-      <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
-        <FaBars />
+      <div className="btn-toggle p-2 mt-2" onClick={() => handleToggleSidebar(true)}>
+        <FaBars  className="" />
       </div>
       {userAuth ? (
         <Route exact path="/admin/dashboard">

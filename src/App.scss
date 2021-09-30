@@ -530,3 +530,14 @@
     .page_heading{font-size:20px!important; padding: 0!important;}
   }
   
+
+
+  .chartSize {
+  /* media queries */
+  @media (max-width: 767px) {
+    width: 600px;
+  }
+  @media (max-width: 400px) {
+    width: 400px;
+  }
+}

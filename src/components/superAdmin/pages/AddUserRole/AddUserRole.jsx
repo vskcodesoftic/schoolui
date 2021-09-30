@@ -65,7 +65,7 @@ import axios from 'axios';
 
 
         
-               <div className="bg-white  shadow-2xl p-5 ">
+               <div className="bg-white  shadow-2xl p-3 ">
                <form onSubmit={handleSubmit(onSubmit)} className="gap-y-2">
                 {/* register your input into the hook by invoking the "register" function */}
                 <div className="md:flex md:items-center mb-6 justify-center">

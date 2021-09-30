@@ -1,0 +1,12 @@
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+.chartSize {
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  width:"600px"
+}
+
+}
+
