@@ -22,15 +22,30 @@ export const userLogin = (user, history) => (dispatch) => {
         dispatch({ type: IS_AUTHENTICATED, payload: true  , userRoleType : userRole });
         toast.success("Logged in successfully");
         if(userRole === 'teacher'){
-          history.push("/teacher/welcomeDashboard");
+          history.push("/");
         }
         else if(userRole === 'admin'){
-         history.push("/dashboard");
+         history.push("/");
       
         }
        
       }
     })
     .catch((err) => console.log(err));
+};
+
+
+
+export const userLogout = () => (dispatch) => {
+  
+    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("userRole");
+
+        dispatch({
+          type: IS_AUTHENTICATED,
+          payload: false,
+          userRoleType: "none",
+        });
+     
 };
 

@@ -77,7 +77,7 @@ const LibrarianAside = ({ image, collapsed, rtl, toggled, handleToggleSidebar })
             rel="noopener noreferrer"
           >
             <FaUser />
-            <span> {intl.formatMessage({ id: 'contact us' })}</span>
+            <span>contact us</span>
           </a>
         </div>
       </SidebarFooter>

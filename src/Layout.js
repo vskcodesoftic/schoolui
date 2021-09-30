@@ -10,7 +10,7 @@ import AccountantMain from './Screens/Accountant/Main'
 import LibrarianAside from './Screens/librarian/Aside';
 import LibrarianMain from './Screens/librarian/Main';
 
-import { Route } from 'react-router';
+import { Redirect, Route } from 'react-router';
 import { useDispatch , useSelector , connect } from 'react-redux';
 
 
@@ -141,7 +141,7 @@ function Layout(props) {
      );
 
    default:
-     return <p>default vvv</p>;
+     return <Redirect to="/login" />;
  }
 
 }

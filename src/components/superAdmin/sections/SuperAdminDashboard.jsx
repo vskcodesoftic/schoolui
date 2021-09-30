@@ -15,7 +15,7 @@ const SuperAdminDashboard = (props) => {
                             <div className="">
                                    <Header />
                            
-                            <div className="p-2 grid grid-flow-col grid-rows-2 md:grid-rows-1  gap-2">
+                            {/* <div className="p-2 grid grid-flow-col grid-rows-2 md:grid-rows-1  gap-2">
                                             <div className="flex bg-white p-2 my-2 flex justify-center shadow-lg">
                                                 <IncomeChart />
                                             </div>
@@ -39,7 +39,7 @@ const SuperAdminDashboard = (props) => {
                             </div>
                         
                              
-                     
+                      */}
                          </div>
                     
                             

@@ -1,5 +1,5 @@
 import React , { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { ToastContainer, Slide } from "react-toastify";
 import { Provider } from "react-redux";
 import { store , persistedStore } from "./store";
@@ -32,8 +32,9 @@ function App() {
                 transition={Slide}
               />
               <Switch>
-                <Route exact path="/" component={Login} />
+                <Route exact path="/login" component={Login} />
                 <Layout setLocale={setLocale} />
+               
               </Switch>
             </React.Fragment>
           </Router>

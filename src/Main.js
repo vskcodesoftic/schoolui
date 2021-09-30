@@ -26,6 +26,7 @@ import NonTeacherViewDataPage from './components/superAdmin/pages/ViewData/NonTe
 import AnnouncementViewDataPage from './components/superAdmin/pages/ViewData/AnnouncementViewDataPage';
 import TeacherDashboard from './components/Teacher/sections/TeacherDashboard';
 import StudentDashboard from './components/students/StudentDashboard';
+import { connect } from 'react-redux';
 
 const Main = ({
   collapsed,
@@ -35,100 +36,120 @@ const Main = ({
   handleCollapsedChange,
   handleRtlChange,
   handleImageChange,
+  ...restProps
 }) => {
   const intl = useIntl();
+   const userAuth = restProps.authState.isAuthenticated;
+   console.log("user userAuth ===>", userAuth);
   return (
     <main>
-      <div className="bg-green-500 p-5">
-
-      </div>
+      <div className="bg-green-500 p-5"></div>
       <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
         <FaBars />
       </div>
-     
-     <Route exact path="/admin/dashboard" >
-       <AdminDashboard />
-     </Route>
+      {userAuth ? (
+        <Route exact path="/admin/dashboard">
+          <AdminDashboard />
+        </Route>
+      ) : (
+        <Redirect to="/login" />
+      )}
 
-     <Route exact path="/superadmin/dashboard" >
-       <SuperAdminDashboard />
-     </Route>
+      {userAuth ? (
+        <Route exact path="/superadmin/dashboard">
+          <SuperAdminDashboard />
+        </Route>
+      ) : (
+        <Redirect to="/login" />
+      )}
 
-     <Route exact path="/superadmin/attendence/teacher" >
-       <FacultyAttendence />
-     </Route>
-     <Route exact path="/superadmin/attendence/admin" >
-       <AdminsAttendence />
-     </Route>
+      {userAuth ? (
+        <>
+          <Route exact path="/superadmin/attendence/teacher">
+            <FacultyAttendence />
+          </Route>
+          <Route exact path="/superadmin/attendence/admin">
+            <AdminsAttendence />
+          </Route>
 
-     <Route exact path="/superadmin/attendence/temporary-teacher" >
-       <NonPermanentAttendence />
-     </Route>
+          <Route exact path="/superadmin/attendence/temporary-teacher">
+            <NonPermanentAttendence />
+          </Route>
 
-     <Route exact path="/superadmin/attendence/student" >
-       <StudentAttendence />
-     </Route>
+          <Route exact path="/superadmin/attendence/student">
+            <StudentAttendence />
+          </Route>
 
-     <Route exact path="/superadmin/attendence/librarian" >
-       <LibrainAttendencePage />
-     </Route>
-     <Route exact path="/superadmin/attendence/accountant" >
-       <AccountantAttendencePage />
-     </Route>
-     <Route exact path="/superadmin/attendence/clerk" >
-       <ClerkAttendencePage />
-     </Route>
+          <Route exact path="/superadmin/attendence/librarian">
+            <LibrainAttendencePage />
+          </Route>
+          <Route exact path="/superadmin/attendence/accountant">
+            <AccountantAttendencePage />
+          </Route>
+          <Route exact path="/superadmin/attendence/clerk">
+            <ClerkAttendencePage />
+          </Route>
 
-    <Route exact path="/superadmin/data/admin/view">
-      <AdminViewDataPage />
-    </Route>
-   
-    <Route exact path="/superadmin/roles/add">
-      <AddUserRolesPage />
-    </Route>
+          <Route exact path="/superadmin/data/admin/view">
+            <AdminViewDataPage />
+          </Route>
 
-    <Route exact path="/superadmin/data/accountant/view">
-      <AccountantViewDataPage />
-    </Route>
+          <Route exact path="/superadmin/roles/add">
+            <AddUserRolesPage />
+          </Route>
 
-    <Route exact path="/superadmin/data/clerk/view">
-      <ClerkViewDataPage />
-    </Route>
+          <Route exact path="/superadmin/data/accountant/view">
+            <AccountantViewDataPage />
+          </Route>
 
-    <Route exact path="/superadmin/data/librarian/view">
-      <LibrarianViewDataPage />
-    </Route>
+          <Route exact path="/superadmin/data/clerk/view">
+            <ClerkViewDataPage />
+          </Route>
 
-    <Route exact path="/superadmin/data/students/view">
-      <StudentViewDataPage />
-    </Route>
+          <Route exact path="/superadmin/data/librarian/view">
+            <LibrarianViewDataPage />
+          </Route>
 
-    <Route exact path="/superadmin/data/teachers/view">
-      <TeacherViewDataPage />
-    </Route>
+          <Route exact path="/superadmin/data/students/view">
+            <StudentViewDataPage />
+          </Route>
 
-    <Route exact path="/superadmin/data/non-teachers/view">
-      <NonTeacherViewDataPage />
-    </Route>
-   
-    <Route exact path="/superadmin/data/announcements/view">
-      <AnnouncementViewDataPage />
-    </Route>
+          <Route exact path="/superadmin/data/teachers/view">
+            <TeacherViewDataPage />
+          </Route>
 
-    <Route exact path="/teacher/dashboard">
-      <TeacherDashboard />
-    </Route>
+          <Route exact path="/superadmin/data/non-teachers/view">
+            <NonTeacherViewDataPage />
+          </Route>
 
-    <Route exact path="/student/dashboard">
-      <StudentDashboard />
-    </Route>
+          <Route exact path="/superadmin/data/announcements/view">
+            <AnnouncementViewDataPage />
+          </Route>
+{/* 
+          <Route exact path="/teacher/dashboard">
+            <TeacherDashboard />
+          </Route>
 
+          <Route exact path="/student/dashboard">
+            <StudentDashboard />
+          </Route> */}
 
-     <Route exact path="/">   
-     <Redirect to="/superadmin/dashboard" />
-     </Route>    
-  </main>
+          <Route exact path="/">
+            <Redirect to="/superadmin/dashboard" />
+          </Route>
+        </>
+      ) : (
+        <Redirect to="/login" />
+      )}
+      
+    </main>
   );
 };
 
-export default Main;
+function mapStateToProps(state) {
+  const { auth } = state;
+  return { authState: auth };
+}
+
+export default connect(mapStateToProps)(Main);
+
