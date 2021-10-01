@@ -1,7 +1,7 @@
 import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import { toast } from "react-toastify";
-import { IS_AUTHENTICATED } from "./types";
+import { IS_AUTHENTICATED  } from "./types";
 import { api_url } from "../utils/api";
 import { createContext } from "react";
 import Layout from "../Layout";
@@ -11,7 +11,13 @@ export const userLogin = (user, history) => (dispatch) => {
   axios
     .post(api_url + "/api/admin/login", user)
     .then((res) => {
-      if (res.data.error) return toast.error(res.data.error);
+  if (res.data.error){
+           console.log("errr",res.data.error);
+
+    return ( 
+       toast.error(res.data.error || res.data.message)
+       )
+  }
       if (res.data.success) {
         const { token, userRole} = res.data.data;
         console.log("role :",userRole)

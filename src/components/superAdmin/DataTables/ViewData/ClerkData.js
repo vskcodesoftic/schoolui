@@ -1,29 +1,60 @@
 import MaterialTable from 'material-table';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AddBox, ArrowDownward } from "@material-ui/icons";
+import { api_url } from '../../../../utils/api';
+import axios from 'axios';
 
 const ClerkData =() => {
   const { useState } = React;
+  const [data, setData] = useState([
+    {
+      name: "Jhony",
+      Email: "Jhony@gmail.com",
+      contactNumber: 7669666966,
+      Gender: 0,
+      status: "Active",
+    },
+    {
+      name: "Sarapata",
+      Email: "Sarapata@it.com",
+      contactNumber: 988988989,
+      Gender: 1,
+      status: "InActive",
+    },
+  ]);
+
+    
+  const getData = async () => {
+   
+      axios
+        .get(`${api_url}/api/admin/getClerkDetails`)
+        .then((res) => {
+          console.log("data ===> ",res.data);
+          setData(res.data.clerk)
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+  }
+
+  useEffect(()=>{
+    getData()
+  },[])
 
   const [columns, setColumns] = useState([
-    { title: 'Full Name', field: 'name' },
-    { title: 'Email', field: 'Email', initialEditValue: 'initial edit value' },
-    { title: 'Contact Number', field: 'contactNumber', type: 'numeric' },
+    { title: "Full Name", field: "name" },
+    { title: "Email", field: "email", initialEditValue: "initial edit value" },
+    { title: "UserName", field: "username", type: "numeric" },
+    { title: "User Role", field: "userRole" },
+
     {
-      title: 'Gender',
-      field: 'Gender',
-      lookup: { 0: 'Male', 1: 'Female' },
+      title: "Status",
+      field: "status",
+      lookup: { active: "Active", inactive: "InActive", disabled: "Disabled" },
     },
-    { title: 'Status', field: 'status',
-     lookup: { 'Active': 'Active', 'InActive': 'InActive' , 'Disabled':'Disabled' },
-  },
-
   ]);
 
-  const [data, setData] = useState([
-    { name: 'Jhony', Email: 'Jhony@gmail.com', contactNumber: 7669666966, Gender: 0 , status : 'Active'},
-    { name: 'Sarapata', Email: 'Sarapata@it.com', contactNumber: 988988989, Gender: 1 , status : 'InActive'},
-  ]);
+
 
   return (
     <MaterialTable
