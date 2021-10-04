@@ -56,14 +56,14 @@ const Header = () => {
 
   return (
     <div>
-      <div className="bg-white mt-3  w-2/3  md:w-full">
+      <div className="bg-white mt-3  w-3/2  md:w-full">
         <h1 className="bold-text text-2xl	 text-green-500 broder border-b b-2  border-green-500 captalize text-center">
           Welcome Super Admin{" "}
         </h1>
       </div>
       <div className="">
         <div className="grid grid-flow-col  grid-rows-4 md:grid-rows-2 lg:grid-rows-1 gap-2 py-2 px-2 ">
-          <div className="bg-orange-400 w-2/3 md:w-full h-40  p-5 rounded-lg shadow-lg hover:shadow-2xl">
+          <div className="bg-orange-400 w-3/2 md:w-full h-40  p-5 rounded-lg shadow-lg hover:shadow-2xl">
             <div className="flex justify-between">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ const Header = () => {
             </h2>
           </div>
 
-          <div className="bg-green-400 w-2/3 md:w-full h-40 p-5 rounded-lg shadow-lg hover:shadow-2xl">
+          <div className="bg-green-400 w-3/2 md:w-full h-40 p-5 rounded-lg shadow-lg hover:shadow-2xl">
             <div className="flex justify-between">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Header = () => {
             <h2 className="text-right text-lg font-bold ">1200</h2>
           </div>
 
-          <div className="bg-blue-400  w-2/3 md:w-full h-40 p-5 rounded-lg shadow-lg hover:shadow-2xl">
+          <div className="bg-blue-400  w-3/2 md:w-full h-40 p-5 rounded-lg shadow-lg hover:shadow-2xl">
             <div className="flex justify-between">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ const Header = () => {
             </h2>
           </div>
 
-          <div className="bg-pink-400  w-2/3 md:w-full h-40 p-5 rounded-lg shadow-lg hover:shadow-2xl">
+          <div className="bg-pink-400  w-3/2 md:w-full h-40 p-5 rounded-lg shadow-lg hover:shadow-2xl">
             <div className="flex justify-between">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

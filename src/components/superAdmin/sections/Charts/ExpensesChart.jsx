@@ -1,30 +1,44 @@
-import React, { Component } from 'react';
-import Chart from 'react-apexcharts'
+import React from "react";
+import { Doughnut } from "react-chartjs-2";
 
-class ExpensesChart extends Component {
+const data = {
+  labels: ["Books And Uniform Sales", "Rent", "Miscelianous", "Donation"],
+  datasets: [
+    {
+      label: "# of Votes",
+      data: [12, 19, 3, 5],
+      backgroundColor: [
+        "rgba(255, 99, 132)",
+        "rgba(54, 162, 235)",
+        "rgba(255, 206, 86)",
+        "rgba(75, 192, 192)",
+        "rgba(153, 102, 255 )",
+        "rgba(255, 159, 64)",
+      ],
+      borderColor: [
+        "rgba(255, 99, 132)",
+        "rgba(54, 162, 235)",
+        "rgba(255, 206, 86)",
+        "rgba(75, 192, 192)",
+        "rgba(153, 102, 255)",
+        "rgba(255, 159, 64)",
+      ],
+      borderWidth: 2,
+    },
+  ],
+};
 
-  constructor(props) {
-    super(props);
+const ExpensesChart = () => {
+  return (
+    <div>
+      <h1 className="text-green-400 text-2xl underline  text-center">
+        Expense Chart
+      </h1>
 
-    this.state = {
-      options: {
-        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63'],
-        labels: ['Books And Uniform Sales', 'Rent', 'Miscelianous', 'Donation']
-
-      },
-      series: [44, 55, 41, 17],
-    }
-  }
-
-  render() {
-
-    return (
-      <div className=" justify-center items-center">
-        <p>Expenses</p>
-        <Chart options={this.state.options}  series={this.state.series} type="donut" width="340" />
-      </div>
-    );
-  }
-}
+      <Doughnut data={data} />
+    </div>
+  );
+};
 
 export default ExpensesChart;
+
